@@ -21,6 +21,10 @@ Execute this command on the EXIT server outside of Iran:
 ```shell
 docker run --rm -e CONFIG="ubuntu:pass1234@1.2.3.4:22" -v$(pwd)/config:/config -it hackerschoice/iran-ssh-proxy
 ```
+
+**Step 3:**  
+Ask the Users to read the Instructions at http://1.2.3.4:8080 to tunnel out of Iran.
+
 ---
 If you have ROOT access to the VPS inside of Iran then use this:
 
