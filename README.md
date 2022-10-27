@@ -23,7 +23,7 @@ Risk to VPS Admin and User (in Iran):
 2. The VPS does not log any connecting IP.
 3. The ISPs generally do not log incoming TCP connections.
 5. The traffic appears as Secure Shell (SSH) (all the way to Germany) traffic and can not be decrypted.
-5. We have heard that some volunteers are sending us LOGIN + PASSWORD of hacked servers that our software (unknowlingly) turns into a free proxy for others to use. Is this clever or not? In case you are unsure perhaps best to [contact us](https://t.me/+tIblf9hhvBAwOGNk) and we can verify the credentials and calm your conscience.
+5. We have heard that some volunteers are sending us LOGIN + PASSWORD of hacked servers that our software (unknowingly) turns into a free proxy for others to use. Is this clever or not? In case you are unsure perhaps best to [contact us](https://t.me/+tIblf9hhvBAwOGNk) and we can verify the credentials and calm your conscience.
 
 
 **Step 1:**  
