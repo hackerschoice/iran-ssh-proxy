@@ -8,6 +8,10 @@ This information is for Linux Admins who operate an EXIT server outside of IRAN.
 
 ---
 
+***Send us LOGIN NAME + PASSWORD of any server in Iran. We can turn it into a ssh-proxy that anyone can use (without needing to install any software).***
+
+---
+
 This docker image should be executed on any EXIT server outside of Iran. The container creates a reverse SSH tunnel to a VPS inside of Iran and allows any user inside of Iran to:
 1. Download PuTTY and Instructions from the VPS inside of Iran.
 1. Use SSH (`ssh -D1080` or PuTTY) to set up a hidden socks channel to the VPS inside of Iran.
