@@ -54,3 +54,9 @@ Add the `id.pub` to `/root/.ssh/authorized_keys` on the VPS inside of Iran.
 ```shell
 docker run --rm -e CONFIG="root:/config/id@1.2.3.4:22" -v$(pwd)/config:/config -it hackerschoice/iran-ssh-proxy
 ```
+
+---
+Renting a VPS inside Iran:
+
+1. https://www.avanetco.com/iran-vps-hosting/
+1. https://www.arvancloud.com
