@@ -54,8 +54,9 @@ for s in "${FP_SSH[@]}"; do RED+=("-R${s}:127.0.0.1:22"); FP_SSH_INFO+="$sip:${s
 for s in "${FP_SX[@]}"; do RED+=("-R${s}:127.0.0.1:1080"); FP_SX_INFO+="$sip:${s} "; done
 for s in "${FP_HTTP[@]}"; do RED+=("-R${s}:127.0.0.1:80"); FP_HTTP_INFO+="http://${sip}:${s} "; done
 
-server_str="${sip} PORT ${FP_SSH[0]} (use this for PuTTY)"
-sed 's/^SSH Server.*$/SSH Server: '"${server_str}"'/' -i /var/www/html/index.html
+server_str="${sip} PORT <span style=\"background-color:yellow;\">${FP_SSH[0]}</span> (use this for PuTTY)"
+sed 's/@@@SIP@@@/'"${sip}"'/g' -i /var/www/html/index.html
+sed 's/@@@SPORT@@@/'"${FP_SSH[0]}"'/g' -i /var/www/html/index.html
 
 SCMD="\
 grep \"^GatewayPorts yes\" /etc/ssh/sshd_config >/dev/null || { echo \"Please set 'GatewayPorts yes' in /etc/ssh/sshd_config\"; exit 240; }

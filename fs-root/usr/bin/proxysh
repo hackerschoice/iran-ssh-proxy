@@ -4,6 +4,7 @@ date
 echo "Step 1/2 SUCCESS."
 echo "Now configure your browser to use this proxy".
 
+exec 0<&- # Close STDIN
 sleep infinity
 
 
