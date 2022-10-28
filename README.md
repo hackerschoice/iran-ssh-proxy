@@ -45,7 +45,7 @@ If you have ROOT access to the VPS inside of Iran then use this:
 Create an SSH key on the EXIT server:
 ```shell
 mkdir config
-ssh-keygen -t ed25519 config/id
+ssh-keygen -t ed25519 -N "" -f config/id
 ```
 
 **Step 2:**  
