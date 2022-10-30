@@ -4,7 +4,7 @@ This information is for Linux Admins who operate an EXIT server outside of IRAN.
 
 ---
 * If you are an ADMIN inside of IRAN: Join us on [Telegram](https://t.me/+tIblf9hhvBAwOGNk).  
-* If you are a USER inside of IRAN: Read [http://37.32.7.81:8080/](http://37.32.7.81:8080/) or ask a friend where to get the information.
+* If you are a USER inside of IRAN: Read [https://iq.thc.org/latest-iran-proxy-servers](https://iq.thc.org/latest-iran-proxy-servers) or ask a friend where to get the information.
 
 ---
 
