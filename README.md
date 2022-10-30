@@ -14,6 +14,8 @@ This information is for Linux Admins who operate an EXIT server outside of IRAN.
 
 This docker image runs on an EXIT server outside of Iran. The container connects (by SSH) to a VPS inside of Iran and forwards ports back to the EXIT server (ssh -R). No data is stored inside of Iran. The EXIT server runs socks/shadowsocks/nginx inside the docker container. The user connects to the VPS inside of Iran and the connection is forwarded (via ssh-reverse) to the EXIT server where the data is stored.
 
+This proxy works when all international Internet is OFF for user's in Iran and when Iran filters or block all outgoing connections.
+
 The user can:
 1. Download PuTTY and Instructions via the VPS inside of Iran.
 1. Use SSH (`ssh -D1080` or PuTTY) to set up a hidden socks channel to Freedom with the VPS inside of Iran being the entry.
