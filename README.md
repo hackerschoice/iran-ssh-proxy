@@ -12,10 +12,11 @@ This information is for Linux Admins who operate an EXIT server outside of IRAN.
 
 ---
 
-This docker image should be executed on any EXIT server outside of Iran. The container creates a reverse SSH tunnel to a VPS inside of Iran and allows any user inside of Iran to:
+This docker image runs on an EXIT server outside of Iran. The container connects to a VPS inside of Iran and forwards ports back to the EXIT server. No data is stored inside of Iran. The user can then connect to the VPS inside of Iran and the connection is forwarded (via ssh-reverse) to the EXIT server where the data is stored:
 1. Download PuTTY and Instructions from the VPS inside of Iran.
 1. Use SSH (`ssh -D1080` or PuTTY) to set up a hidden socks channel to the VPS inside of Iran.
 1. SOCKS5-Tunnel all traffic via the VPS inside of Iran and then via the EXIT server outside of Iran.
+1. Use ShadowSocks
 
 Risk to VPS Admin and User (in Iran):
 1. We do not install _any_ software on the VPS
