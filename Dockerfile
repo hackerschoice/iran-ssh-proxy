@@ -7,6 +7,9 @@ RUN apt-get update -y \
 	vim \
 	openssh-client \
 	openssh-server \
+	qrencode \
+	shadowsocks-libev \
+	net-tools \
 	sshpass \
 	netcat \
 	nginx \
