@@ -8,7 +8,7 @@ This information is for Linux Admins who operate an EXIT server outside of IRAN.
 
 ---
 
-***Send us LOGIN NAME + PASSWORD of any server in Iran. We can turn it into a ssh-proxy that anyone can use (without needing to install any software).***
+***Send us LOGIN NAME + PASSWORD of any server in Iran. We can turn it into a SSH _and_ ShadowSocks proxy that anyone can use (without needing to install any software).***
 
 ---
 
