@@ -27,7 +27,11 @@ Risk to VPS Admin and User (in Iran):
 
 
 **Step 1:**  
-Create a User on any VPS inside of Iran. We assume the user is called `ubuntu` with password `pass1234` and has IP Address `1.2.3.4`.
+Create a User on any VPS inside of Iran. We assume the user is called `ubuntu` with password `pass1234` and has IP Address `1.2.3.4`. Execute this command on the IRAN-VPS (as root):
+```shell
+sed 's/.*GatewayPorts no.*/GatewayPorts yes/' -i /etc/ssh/sshd_config
+systemctl restart sshd
+```
 
 **Step 2:**  
 Execute this command on the EXIT server outside of Iran:
