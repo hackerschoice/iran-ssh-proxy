@@ -58,5 +58,5 @@ docker run --rm -e CONFIG="root:/config/id@1.2.3.4:22" -v$(pwd)/config:/config -
 ---
 Renting a VPS inside Iran:
 
-1. https://www.avanetco.com/iran-vps-hosting/
+1. https://www.avanetco.com/iran-vps-hosting/ (accepts BitCoin)
 1. https://www.arvancloud.com
