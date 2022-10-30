@@ -1,0 +1,5 @@
+#!/command/with-contenv bash
+#
+#
+/usr/bin/docker_ss.sh
+

@@ -1,0 +1,7 @@
+{
+    "server":"0.0.0.0",
+    "server_port":8388,
+    "password":"proxy",
+    "timeout":60,
+    "method":"chacha20-ietf-poly1305"
+}
