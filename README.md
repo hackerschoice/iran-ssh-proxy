@@ -4,18 +4,22 @@ This information is for Linux Admins who operate an EXIT server outside of IRAN.
 
 ---
 * If you are an ADMIN inside of IRAN: Join us on [Telegram](https://t.me/+tIblf9hhvBAwOGNk).  
-* If you are a USER inside of IRAN: Read [http://37.32.7.81:8080/](http://37.32.7.81:8080/) or ask a friend where to get the information.
+* If you are a USER inside of IRAN: Read [https://iq.thc.org/latest-iran-proxy-servers](https://iq.thc.org/latest-iran-proxy-servers).
 
 ---
 
-***Send us LOGIN NAME + PASSWORD of any server in Iran. We can turn it into a ssh-proxy that anyone can use (without needing to install any software).***
+***Send us LOGIN NAME + PASSWORD of any server in Iran. We can turn it into a SSH _and_ ShadowSocks proxy that anyone can use (without needing to install any software).***
 
 ---
 
-This docker image should be executed on any EXIT server outside of Iran. The container creates a reverse SSH tunnel to a VPS inside of Iran and allows any user inside of Iran to:
-1. Download PuTTY and Instructions from the VPS inside of Iran.
-1. Use SSH (`ssh -D1080` or PuTTY) to set up a hidden socks channel to the VPS inside of Iran.
-1. SOCKS5-Tunnel all traffic via the VPS inside of Iran and then via the EXIT server outside of Iran.
+This docker image runs on an EXIT server outside of Iran. The container connects (by SSH) to a VPS inside of Iran and forwards ports back to the EXIT server (ssh -R). No data is stored inside of Iran. The EXIT server runs socks/shadowsocks/nginx inside the docker container. The user connects to the VPS inside of Iran and the connection is forwarded (via ssh-reverse) to the EXIT server where the data is stored.
+
+This proxy works when all international Internet is OFF for user's in Iran and when Iran filters or block all outgoing connections.
+
+The user can:
+1. Download PuTTY and Instructions via the VPS inside of Iran.
+1. Use SSH (`ssh -D1080` or PuTTY) to set up a hidden socks channel to Freedom with the VPS inside of Iran being the entry.
+1. Use ShadowSocks
 
 Risk to VPS Admin and User (in Iran):
 1. We do not install _any_ software on the VPS
@@ -27,7 +31,11 @@ Risk to VPS Admin and User (in Iran):
 
 
 **Step 1:**  
-Create a User on any VPS inside of Iran. We assume the user is called `ubuntu` with password `pass1234` and has IP Address `1.2.3.4`.
+Create a User on any VPS inside of Iran. We assume the user is called `ubuntu` with password `pass1234` and has IP Address `1.2.3.4`. Execute this command on the IRAN-VPS (as root):
+```shell
+sed 's/.*GatewayPorts no.*/GatewayPorts yes/' -i /etc/ssh/sshd_config
+systemctl restart sshd
+```
 
 **Step 2:**  
 Execute this command on the EXIT server outside of Iran:
@@ -58,5 +66,5 @@ docker run --rm -e CONFIG="root:/config/id@1.2.3.4:22" -v$(pwd)/config:/config -
 ---
 Renting a VPS inside Iran:
 
-1. https://www.avanetco.com/iran-vps-hosting/
+1. https://www.avanetco.com/iran-vps-hosting/ (accepts BitCoin)
 1. https://www.arvancloud.com
