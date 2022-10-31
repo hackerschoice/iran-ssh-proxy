@@ -4,6 +4,7 @@
 
 ENTRY NODE
 ---
+Block with iptables by COUNTRY.  
 Monitor network traffic and block anything that's not from inside of Iran:
 ```
 admin/tcpgeo.sh iran -q -b
