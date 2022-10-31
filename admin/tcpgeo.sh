@@ -204,6 +204,7 @@ shift $(($OPTIND - 1))
 [[ -n $* ]] && PCAP="$*"
 [[ -n $is_with_block ]] && {
 	allow_myself "${SSH_CONNECTION%% *}"
+	iptables -C INPUT -p tcp --dport 22 -j ACCEPT 2>/dev/null || iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 	blocks_start=$(iptables -n -L INPUT | wc -l)
 }
 
